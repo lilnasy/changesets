@@ -100,12 +100,12 @@ const changelogFunctions: ChangelogFunctions = {
       };
     })();
 
-    const { linkUsername = true } = options;
+    const { linkUsernames = true } = options;
 
     const users = usersFromSummary.length
       ? usersFromSummary
           .map(
-            linkUsername
+            linkUsernames
               ? (userFromSummary) =>
                   `[@${userFromSummary}](https://github.com/${userFromSummary})`
               : (userFromSummary) => `@${userFromSummary}`
