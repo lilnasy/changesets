@@ -1,5 +1,36 @@
 # @changesets/changelog-github
 
+## 0.5.0
+
+### Minor Changes
+
+- [#1185](https://github.com/changesets/changesets/pull/1185) [`a971652`](https://github.com/changesets/changesets/commit/a971652ec1403aab3fb89eb2f1640bd5012b895a) Thanks [@Andarist](https://github.com/Andarist)! - `package.json#exports` have been added to limit what (and how) code might be imported from the package.
+
+- [`09b14a1`](https://github.com/changesets/changesets/commit/09b14a15607ec52154c1b06f9dfdca2eabf91be8) Thanks [@lilnasy](https://github.com/lilnasy)! - You can now remove links from GitHub usernames, allowing your contributors to appear prominently in releases in the "Contributors" section.
+
+  To make use of this feature, set `linkUsernames` to `false` in your .changeset/config.json file:
+
+  ```diff
+  {
+      "$schema": "https://unpkg.com/@changesets/config@1.7.0/schema.json",
+      "changelog": [
+          "@changesets/changelog-github",
+          {
+              "repo": "your-org/your-repo",
+  +           "linkUsernames": false
+          }
+      ]
+  }
+  ```
+
+  See [GitHub documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) for more details.
+
+### Patch Changes
+
+- Updated dependencies [[`a971652`](https://github.com/changesets/changesets/commit/a971652ec1403aab3fb89eb2f1640bd5012b895a)]:
+  - @changesets/get-github-info@0.6.0
+  - @changesets/types@6.0.0
+
 ## 0.4.8
 
 ### Patch Changes
